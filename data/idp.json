@@ -1,0 +1,821 @@
+[
+    {
+        "departement": "Bouenza",
+        "district": "Boko-Songho",
+        "IDP": 123,
+        "Provenance": "Loulombo",
+        "Residence": "KINKALA"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Boko-Songho",
+        "IDP": 43,
+        "Provenance": "Massembo",
+        "Residence": "MINDOULI"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Boko-Songho",
+        "IDP": 78,
+        "Provenance": "KINKEMBO",
+        "Residence": "LOUTETE"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Boko-Songho",
+        "IDP": 23,
+        "Provenance": "Mangola",
+        "Residence": "YAMBA"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Boko-Songho",
+        "IDP": 67,
+        "Provenance": "MBOUABA",
+        "Residence": "LOUKANGA"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Boko-Songho",
+        "IDP": 5,
+        "Provenance": "Mindouli",
+        "Residence": "DZOUMOUNA"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Boko-Songho",
+        "IDP": 56,
+        "Provenance": "Kingoyi",
+        "Residence": "NKAYI"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Boko-Songho",
+        "IDP": 8,
+        "Provenance": "Mienanzambi",
+        "Residence": "BOUANSA"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Boko-Songho",
+        "IDP": 76,
+        "Provenance": "Mayama",
+        "Residence": "KINGOUE"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Boko-Songho",
+        "IDP": 91,
+        "Provenance": "Kouhounga Moutsila",
+        "Residence": "LEKOUMOU"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Boko-Songho",
+        "IDP": 51,
+        "Provenance": "Loulombo",
+        "Residence": "KIMOUANDA"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Boko-Songho",
+        "IDP": 10,
+        "Provenance": "Massembo",
+        "Residence": "MISSAFOU"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Boko-Songho",
+        "IDP": 17,
+        "Provenance": "KINKEMBO",
+        "Residence": "MAYAMA"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Boko-Songho",
+        "IDP": 12,
+        "Provenance": "Mangola",
+        "Residence": "KINKALA"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Boko-Songho",
+        "IDP": 67,
+        "Provenance": "MBOUABA",
+        "Residence": "MINDOULI"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Boko-Songho",
+        "IDP": 72,
+        "Provenance": "Mindouli",
+        "Residence": "LOUTETE"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Boko-Songho",
+        "IDP": 78,
+        "Provenance": "Kingoyi",
+        "Residence": "YAMBA"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Mfouati",
+        "IDP": 21,
+        "Provenance": "Mienanzambi",
+        "Residence": "LOUKANGA"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Mfouati",
+        "IDP": 123,
+        "Provenance": "Mayama",
+        "Residence": "DZOUMOUNA"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Mfouati",
+        "IDP": 43,
+        "Provenance": "Kouhounga Moutsila",
+        "Residence": "NKAYI"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Mfouati",
+        "IDP": 78,
+        "Provenance": "Loulombo",
+        "Residence": "BOUANSA"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Mfouati",
+        "IDP": 23,
+        "Provenance": "Massembo",
+        "Residence": "KINGOUE"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Mfouati",
+        "IDP": 67,
+        "Provenance": "KINKEMBO",
+        "Residence": "LEKOUMOU"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Mfouati",
+        "IDP": 5,
+        "Provenance": "Mangola",
+        "Residence": "KIMOUANDA"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Mfouati",
+        "IDP": 56,
+        "Provenance": "MBOUABA",
+        "Residence": "MISSAFOU"
+  },
+    {
+        "departement": "Pool",
+        "district": "Kinkala",
+        "IDP": 98,
+        "Provenance": "Mindouli",
+        "Residence": "MAYAMA"
+  },
+    {
+        "departement": "Pool",
+        "district": "Kinkala",
+        "IDP": 76,
+        "Provenance": "Kingoyi",
+        "Residence": "KINKALA"
+  },
+    {
+        "departement": "Pool",
+        "district": "Kinkala",
+        "IDP": 9,
+        "Provenance": "Mienanzambi",
+        "Residence": "MINDOULI"
+  },
+    {
+        "departement": "Pool",
+        "district": "Kinkala",
+        "IDP": 51,
+        "Provenance": "Mayama",
+        "Residence": "LOUTETE"
+  },
+    {
+        "departement": "Pool",
+        "district": "Kinkala",
+        "IDP": 10,
+        "Provenance": "Kouhounga Moutsila",
+        "Residence": "YAMBA"
+  },
+    {
+        "departement": "Pool",
+        "district": "Kinkala",
+        "IDP": 17,
+        "Provenance": "Loulombo",
+        "Residence": "LOUKANGA"
+  },
+    {
+        "departement": "Pool",
+        "district": "Kinkala",
+        "IDP": 12,
+        "Provenance": "Massembo",
+        "Residence": "DZOUMOUNA"
+  },
+    {
+        "departement": "Pool",
+        "district": "Kinkala",
+        "IDP": 67,
+        "Provenance": "KINKEMBO",
+        "Residence": "NKAYI"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Nkayi District",
+        "IDP": 72,
+        "Provenance": "Mangola",
+        "Residence": "BOUANSA"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Nkayi District",
+        "IDP": 78,
+        "Provenance": "MBOUABA",
+        "Residence": "KINGOUE"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Nkayi District",
+        "IDP": 12,
+        "Provenance": "Mindouli",
+        "Residence": "LEKOUMOU"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Nkayi District",
+        "IDP": 55,
+        "Provenance": "Kingoyi",
+        "Residence": "KIMOUANDA"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Nkayi District",
+        "IDP": 70,
+        "Provenance": "Mienanzambi",
+        "Residence": "MISSAFOU"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Nkayi District",
+        "IDP": 99,
+        "Provenance": "Mayama",
+        "Residence": "MAYAMA"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Nkayi District",
+        "IDP": 9,
+        "Provenance": "Kouhounga Moutsila",
+        "Residence": "KINKALA"
+  },
+    {
+        "departement": "Pool",
+        "district": "Mayama",
+        "IDP": 8,
+        "Provenance": "Mienanzambi",
+        "Residence": "MINDOULI"
+  },
+    {
+        "departement": "Pool",
+        "district": "Mayama",
+        "IDP": 33,
+        "Provenance": "Mayama",
+        "Residence": "LOUTETE"
+  },
+    {
+        "departement": "Pool",
+        "district": "Mayama",
+        "IDP": 12,
+        "Provenance": "Kouhounga Moutsila",
+        "Residence": "YAMBA"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Loudima",
+        "IDP": 21,
+        "Provenance": "Mienanzambi",
+        "Residence": "LOUKANGA"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Loudima",
+        "IDP": 56,
+        "Provenance": "Mayama",
+        "Residence": "DZOUMOUNA"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Loudima",
+        "IDP": 98,
+        "Provenance": "Kouhounga Moutsila",
+        "Residence": "NKAYI"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Loudima",
+        "IDP": 76,
+        "Provenance": "Loulombo",
+        "Residence": "BOUANSA"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Loudima",
+        "IDP": 91,
+        "Provenance": "Massembo",
+        "Residence": "KINGOUE"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Loudima",
+        "IDP": 51,
+        "Provenance": "KINKEMBO",
+        "Residence": "LEKOUMOU"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Loudima",
+        "IDP": 10,
+        "Provenance": "Mangola",
+        "Residence": "KIMOUANDA"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Loudima",
+        "IDP": 17,
+        "Provenance": "MBOUABA",
+        "Residence": "MISSAFOU"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Loudima",
+        "IDP": 12,
+        "Provenance": "Mindouli",
+        "Residence": "MAYAMA"
+  },
+    {
+        "departement": "Pool",
+        "district": "Ngamaba",
+        "IDP": 20,
+        "Provenance": "Kingoyi",
+        "Residence": "KINKALA"
+  },
+    {
+        "departement": "Pool",
+        "district": "Ngamaba",
+        "IDP": 31,
+        "Provenance": "Mienanzambi",
+        "Residence": "MINDOULI"
+  },
+    {
+        "departement": "Pool",
+        "district": "Ngamaba",
+        "IDP": 3,
+        "Provenance": "Kahounga Moutsila",
+        "Residence": "LOUTETE"
+  },
+    {
+        "departement": "Pool",
+        "district": "Ngamaba",
+        "IDP": 43,
+        "Provenance": "Kinimbi Boloko",
+        "Residence": "YAMBA"
+  },
+    {
+        "departement": "Pool",
+        "district": "Ngamaba",
+        "IDP": 76,
+        "Provenance": "Kindounga",
+        "Residence": "LOUKANGA"
+  },
+    {
+        "departement": "Pool",
+        "district": "Ngamaba",
+        "IDP": 94,
+        "Provenance": "Kinimbi Boloko",
+        "Residence": "DZOUMOUNA"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Madingou",
+        "IDP": 21,
+        "Provenance": "Mindouli",
+        "Residence": "NKAYI"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Madingou",
+        "IDP": 19,
+        "Provenance": "Kingoyi",
+        "Residence": "BOUANSA"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Madingou",
+        "IDP": 51,
+        "Provenance": "Mienanzambi",
+        "Residence": "KINGOUE"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Madingou",
+        "IDP": 10,
+        "Provenance": "Kahounga Moutsila",
+        "Residence": "LEKOUMOU"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Madingou",
+        "IDP": 17,
+        "Provenance": "Kinimbi Boloko",
+        "Residence": "KIMOUANDA"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Madingou",
+        "IDP": 12,
+        "Provenance": "Kindounga",
+        "Residence": "MISSAFOU"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Madingou",
+        "IDP": 90,
+        "Provenance": "Kinimbi Boloko",
+        "Residence": "MAYAMA"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Madingou",
+        "IDP": 31,
+        "Provenance": "Loulombo",
+        "Residence": "BOUANSA"
+  },
+    {
+        "departement": "Pool",
+        "district": "Boko",
+        "IDP": 71,
+        "Provenance": "Massembo",
+        "Residence": "KINGOUE"
+  },
+    {
+        "departement": "Pool",
+        "district": "Boko",
+        "IDP": 43,
+        "Provenance": "KINKEMBO",
+        "Residence": "LEKOUMOU"
+  },
+    {
+        "departement": "Pool",
+        "district": "Boko",
+        "IDP": 56,
+        "Provenance": "Mangola",
+        "Residence": "KIMOUANDA"
+  },
+    {
+        "departement": "Pool",
+        "district": "Boko",
+        "IDP": 98,
+        "Provenance": "MBOUABA",
+        "Residence": "MISSAFOU"
+  },
+    {
+        "departement": "Pool",
+        "district": "Boko",
+        "IDP": 76,
+        "Provenance": "Mindouli",
+        "Residence": "MAYAMA"
+  },
+    {
+        "departement": "Pool",
+        "district": "Boko",
+        "IDP": 15,
+        "Provenance": "Kingoyi",
+        "Residence": "KINKALA"
+  },
+    {
+        "departement": "Pool",
+        "district": "Boko",
+        "IDP": 51,
+        "Provenance": "Mienanzambi",
+        "Residence": "MINDOULI"
+  },
+    {
+        "departement": "Pool",
+        "district": "Kindamba",
+        "IDP": 67,
+        "Provenance": "Kimbedi",
+        "Residence": "LOUTETE"
+  },
+    {
+        "departement": "Pool",
+        "district": "Kindamba",
+        "IDP": 5,
+        "Provenance": "BISSINZA",
+        "Residence": "YAMBA"
+  },
+    {
+        "departement": "Pool",
+        "district": "Kindamba",
+        "IDP": 56,
+        "Provenance": "LINZOLO",
+        "Residence": "LOUKANGA"
+  },
+    {
+        "departement": "Pool",
+        "district": "Kindamba",
+        "IDP": 98,
+        "Provenance": "MOUMBEDAMISA",
+        "Residence": "DZOUMOUNA"
+  },
+    {
+        "departement": "Pool",
+        "district": "Kindamba",
+        "IDP": 76,
+        "Provenance": "MAYALA",
+        "Residence": "NKAYI"
+  },
+    {
+        "departement": "Pool",
+        "district": "Kindamba",
+        "IDP": 91,
+        "Provenance": "MASSISSIA",
+        "Residence": "BOUANSA"
+  },
+    {
+        "departement": "Pool",
+        "district": "Kindamba",
+        "IDP": 51,
+        "Provenance": "MBANZA KOUBATIKA",
+        "Residence": "KINGOUE"
+  },
+    {
+        "departement": "Pool",
+        "district": "Kindamba",
+        "IDP": 10,
+        "Provenance": "Kindounga",
+        "Residence": "LEKOUMOU"
+  },
+    {
+        "departement": "Pool",
+        "district": "Kindamba",
+        "IDP": 17,
+        "Provenance": "Kinimbi Boloko",
+        "Residence": "KIMOUANDA"
+  },
+    {
+        "departement": "Pool",
+        "district": "Kindamba",
+        "IDP": 91,
+        "Provenance": "Mindouli",
+        "Residence": "MISSAFOU"
+  },
+    {
+        "departement": "Pool",
+        "district": "Kindamba",
+        "IDP": 51,
+        "Provenance": "Kingoyi",
+        "Residence": "MAYAMA"
+  },
+    {
+        "departement": "Pool",
+        "district": "Kindamba",
+        "IDP": 10,
+        "Provenance": "Mienanzambi",
+        "Residence": "KINKALA"
+  },
+    {
+        "departement": "Pool",
+        "district": "Kindamba",
+        "IDP": 17,
+        "Provenance": "Kahounga Moutsila",
+        "Residence": "MINDOULI"
+  },
+    {
+        "departement": "Pool",
+        "district": "Kindamba",
+        "IDP": 12,
+        "Provenance": "Kinimbi Boloko",
+        "Residence": "LOUTETE"
+  },
+    {
+        "departement": "Pool",
+        "district": "Kindamba",
+        "IDP": 90,
+        "Provenance": "Kindounga",
+        "Residence": "YAMBA"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Mouyondzi",
+        "IDP": 51,
+        "Provenance": "MOUMBEDAMISA",
+        "Residence": "LOUKANGA"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Mouyondzi",
+        "IDP": 71,
+        "Provenance": "MAYALA",
+        "Residence": "DZOUMOUNA"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Mouyondzi",
+        "IDP": 67,
+        "Provenance": "MASSISSIA",
+        "Residence": "NKAYI"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Mouyondzi",
+        "IDP": 5,
+        "Provenance": "MBANZA KOUBATIKA",
+        "Residence": "BOUANSA"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Mouyondzi",
+        "IDP": 56,
+        "Provenance": "Kindounga",
+        "Residence": "KINGOUE"
+  },
+    {
+        "departement": "Bouenza",
+        "district": "Mouyondzi",
+        "IDP": 98,
+        "Provenance": "KINKEMBO",
+        "Residence": "LEKOUMOU"
+  },
+    {
+        "departement": "Pool",
+        "district": "Ngab̩",
+        "IDP": 21,
+        "Provenance": "Mangola",
+        "Residence": "KIMOUANDA"
+  },
+    {
+        "departement": "Pool",
+        "district": "Ngab̩",
+        "IDP": 91,
+        "Provenance": "MBOUABA",
+        "Residence": "MISSAFOU"
+  },
+    {
+        "departement": "Pool",
+        "district": "Ngab̩",
+        "IDP": 51,
+        "Provenance": "Mindouli",
+        "Residence": "MAYAMA"
+  },
+    {
+        "departement": "Pool",
+        "district": "Ngab̩",
+        "IDP": 10,
+        "Provenance": "Kingoyi",
+        "Residence": "KINKALA"
+  },
+    {
+        "departement": "Pool",
+        "district": "Ngab̩",
+        "IDP": 17,
+        "Provenance": "Mienanzambi",
+        "Residence": "MINDOULI"
+  },
+    {
+        "departement": "Pool",
+        "district": "Ngab̩",
+        "IDP": 91,
+        "Provenance": "NGAMADZAMBALA",
+        "Residence": "LOUTETE"
+  },
+    {
+        "departement": "Pool",
+        "district": "Ngab̩",
+        "IDP": 10,
+        "Provenance": "KINKAKASSA",
+        "Residence": "YAMBA"
+  },
+    {
+        "departement": "Pool",
+        "district": "Ngab̩",
+        "IDP": 17,
+        "Provenance": "KINKALA  MATIBA",
+        "Residence": "LOUKANGA"
+  },
+    {
+        "departement": "Brazzaville",
+        "district": "Brazzaville",
+        "IDP": 54,
+        "Provenance": "MOUMENE",
+        "Residence": "DZOUMOUNA"
+  },
+    {
+        "departement": "Brazzaville",
+        "district": "Brazzaville",
+        "IDP": 90,
+        "Provenance": "MANGUIRI",
+        "Residence": "NKAYI"
+  },
+    {
+        "departement": "Brazzaville",
+        "district": "Brazzaville",
+        "IDP": 51,
+        "Provenance": "MASSISSIA",
+        "Residence": "BOUANSA"
+  },
+    {
+        "departement": "Brazzaville",
+        "district": "Brazzaville",
+        "IDP": 71,
+        "Provenance": "KINKALA  MATIBA",
+        "Residence": "KINGOUE"
+  },
+    {
+        "departement": "Brazzaville",
+        "district": "Brazzaville",
+        "IDP": 67,
+        "Provenance": "MOUMENE",
+        "Residence": "LEKOUMOU"
+  },
+    {
+        "departement": "Brazzaville",
+        "district": "Brazzaville",
+        "IDP": 32,
+        "Provenance": "MANGUIRI",
+        "Residence": "KIMOUANDA"
+  },
+    {
+        "departement": "Brazzaville",
+        "district": "Brazzaville",
+        "IDP": 56,
+        "Provenance": "MASSISSIA",
+        "Residence": "MISSAFOU"
+  },
+    {
+        "departement": "Brazzaville",
+        "district": "Brazzaville",
+        "IDP": 98,
+        "Provenance": "MOUMBEDAMISA",
+        "Residence": "MAYAMA"
+  },
+    {
+        "departement": "Brazzaville",
+        "district": "Brazzaville",
+        "IDP": 76,
+        "Provenance": "MAYALA",
+        "Residence": "KINKALA"
+  },
+    {
+        "departement": "Brazzaville",
+        "district": "Brazzaville",
+        "IDP": 91,
+        "Provenance": "MASSISSIA",
+        "Residence": "MINDOULI"
+  },
+    {
+        "departement": "Pool",
+        "district": "Mindouli",
+        "IDP": 51,
+        "Provenance": "MBANZA KOUBATIKA",
+        "Residence": "LOUTETE"
+  },
+    {
+        "departement": "Pool",
+        "district": "Mindouli",
+        "IDP": 10,
+        "Provenance": "Kindounga",
+        "Residence": "YAMBA"
+  },
+    {
+        "departement": "Pool",
+        "district": "Mindouli",
+        "IDP": 17,
+        "Provenance": "KINKEMBO",
+        "Residence": "LOUKANGA"
+  },
+    {
+        "departement": "Pool",
+        "district": "Mindouli",
+        "IDP": 91,
+        "Provenance": "Mangola",
+        "Residence": "DZOUMOUNA"
+  },
+    {
+        "departement": "Pool",
+        "district": "Mindouli",
+        "IDP": 32,
+        "Provenance": "Mangola",
+        "Residence": "NKAYI"
+  }
+]
