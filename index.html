@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/dc.css" />
     <link rel="stylesheet" type="text/css" href="css/site.css" />
     <link rel="stylesheet" type="text/css" href="css/leaflet.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <script src="js/jquery.js"></script>
     <script src="js/d3.min.js"></script>
     <script src="js/crossfilter.v1.min.js"></script>
@@ -21,36 +22,113 @@
 <body>
     <div class="container">
         <h3>Visualisation de la situation des personnes déplacées internes | République du Congo</h3>
-        <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus eu, pretium quis, sem.
-        </p>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus eu, pretium quis, sem.
         <div class="row">
             <div id="header"></div>
         </div>
-        <div class="row">
-            <div class="col-md-4 sidebar">
-                <div class="col-xs-12" id="contexte">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
+        <div class="col-md-4">
+            <div class="row">
+                <h3>Chiffres clés | date du 9/12/2017</h3>
+                <h4>Total Personnes déplacées</h4>
+                <p id="statTotIndividus"></p>
+                <h4>Total Ménages</h4>
+                <p id="statTotMenages"></p>
+
+                <div class="col-xs-6">
+                    <h4>Hommes</h4>
+                    <p id="statTotHommes"></p>
+                </div>
+                <div class="col-xs-6">
+                    <h4>Femmes</h4>
+                    <p id="statTotFemmes"></p>
+                </div>
+                <h4>Personnes agées (plus de 59 ans)</h4>
+                <p id="statTotVieux"></p>
+                <div class="col-xs-6">
+                    <h4>Hommes</h4>
+                    <p id="statTotVieuxH"></p>
+                </div>
+                <div class="col-xs-6">
+                    <h4>Femmes</h4>
+                    <p id="statTotVieuxF"></p>
+                </div>
+
+                <h3>Education</h3>
+
+                <h4>Primaire</h4>
+                <p id="statTotPrimaire"></p>
+                <div class="col-xs-6">
+                    <h4>Garçons</h4>
+                    <p id="statTotPrimaireH"></p>
+                </div>
+                <div class="col-xs-6">
+                    <h4>Filles</h4>
+                    <p id="statTotPrimaireF"></p>
+                </div>
+
+                <h4>Collège</h4>
+                <p id="statTotCollege"></p>
+                <div class="col-xs-6">
+                    <h4>Garçons</h4>
+                    <p id="statTotCollegeH"></p>
+                </div>
+                <div class="col-xs-6">
+                    <h4>Filles</h4>
+                    <p id="statTotCollegeF"></p>
+                </div>
+
+                <h4>Lycée</h4>
+                <p id="statTotLycee"></p>
+                <div class="col-xs-6">
+                    <h4>Garçons</h4>
+                    <p id="statTotLyceeH"></p>
+                </div>
+                <div class="col-xs-6">
+                    <h4>Filles</h4>
+                    <p id="statTotLyceeF"></p>
+                </div>
+                <div id="vulnerabilite">
+                    <h3>Vulnérabilité</h3>
+                    <h4>Personnes vivant avec un handicap</h4>
+                    <p id="statTotHandicap"></p>
+
+                    <h4>Femmes enceintes</h4>
+                    <p id="statTotFemmesEnceintes"></p>
+
+                    <h4>Veuves</h4>
+                    <p id="statTotVeuves"></p>
+
+                    <h4>Malades</h4>
+                    <p id="statTotMalades"></p>
+
+                    <h4>Enfants non accompagnés/abandonnés</h4>
+                    <p id="statTotEnfantsSeuls"></p>
+
+                    <h4>Orphelins</h4>
+                    <p id="statTotOrphelins"></p>
                 </div>
             </div>
-            <div class="col-md-8 map-container">
-                <div class="regionLabel">
-                    <div>Currently filtering by: <strong>All Regions</strong></div><a href="#" class="reset-btn small">reset</a></div>
-                <div id="map"></div>
-                <p class="small"><em>The boundaries and names shown and the designations used on this map do not imply official endorsement or acceptance by the United Nations.</em></p>
-            </div>
         </div>
-        <div class="row">
-            <div class="col-md-4 ">
-                <h5>Nombre de PDI par Département</h5>
-                <div id="idpDepartement"></div>
+        <div class="col-md-8">
+            <div class="col-sm-12 map-container">
+                <div class="regionLabel">
+                    <div>Filtre actif: <strong>Tous les départements</strong></div>
+                    <a href="#" class="reset-btn small">reset</a>
+                </div>
+                <div id="map"></div>
+                <p class="small"><em>The boundaries and names shown and the designations used on this map do not imply official endorsement or acceptance by the United Nations.</em>
+                </p>
             </div>
-            <div class="col-md-4 ">
-                <h5>Nombre de PDI par localité de provenance</h5>
-                <div id="provenance"></div>
-            </div>
-            <div class="col-md-4 ">
-                <h5>Nombre de PDI par localité de résidence</h5>
-                <div id="residence"></div>
+            <div class="col-md-12 rowcharts">
+                <div class="col-md-6">
+                    <h4>Localité/Site de résidence</h4>
+                    <div id="residenceChart"></div>
+                </div>
+                <div class="col-md-6">
+                    <h4>Département</h4>
+                    <div id="idpDepartement"></div>
+                </div>
+
             </div>
         </div>
     </div>

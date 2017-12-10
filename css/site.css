@@ -1,3 +1,28 @@
+/*
+body {
+    font-family: 'Raleway';
+}
+*/
+
+h3 {
+    font-size: 1.5em;
+}
+
+h4 {
+    font-size: 1.4em;
+    color: #F2AB27;
+    font-family: 'Raleway';
+}
+
+.col-xs-6 h4 {
+    font-size: 1.2em;
+    color: #414174;
+}
+
+.col-md-6 h4 {
+    color: #000000;
+}
+
 #header {
     border-bottom-color: #dddddd;
     border-bottom-style: solid;
@@ -13,55 +38,65 @@
     width: 100%;
 }
 
-#contexte {
-    text-align: justify;
+.col-xs-6 {
+    padding-right: 0px;
 }
 
+.col-xs-6 p {
+    font-size: 1.2em;
+    color: #414174;
+}
 
-/**** ELEMENTS ****/
+#vulnerabilite p {
+    font-size: 1.4em;
+    color: #056CB6;
+}
 
+#statTotIndividus {
+    font-size: 1.4em;
+    color: #056CB6;
+}
 
-/*body {
-	font-family: 'SourceSansPro-Regular';
+#statTotMenages {
+    font-size: 1.4em;
+    color: #056CB6;
 }
-h1 {
-	font-family: 'Gotham-Bold';
-	font-size: 19px;
-	margin-top: 0;
+
+#statTotVieux {
+    font-size: 1.4em;
+    color: #056CB6;
 }
-h1+p {
-	margin-bottom: 20px;
+
+#statTotPrimaire {
+    font-size: 1.4em;
+    color: #056CB6;
 }
-h3{
-	font-family: 'SourceSansPro-Regular';
-	font-size: 14px;
-	font-weight: normal;
-	margin-top: 0;
+
+#statTotCollege {
+    font-size: 1.4em;
+    color: #056CB6;
 }
-h4{
-	font-family: 'Gotham-Bold';
-	font-size: 12px;
-	margin-bottom: 5px;
-	text-transform: uppercase;
+
+#statTotLycee {
+    font-size: 1.4em;
+    color: #056CB6;
 }
-a {
-	text-decoration: underline;
+
+#residenceChart g.row text {
+    fill: #000000;
+    font-family: Raleway;
 }
-strong {
-	font-family: 'Gotham-Bold';
-}*/
+
+#idpDepartement g.row text {
+    fill: #000000;
+    font-family: Raleway;
+    font-size: 1.2em;
+}
 
 .map-container {
     display: none;
     margin-bottom: 30px;
 }
-
-
-/*
-#map {
-    background-color: #b5d0d0;
-}
-*/
 
 .map-tip {
     position: absolute;
@@ -90,11 +125,6 @@ strong {
     bottom: 20px;
     right: 35px;
     text-align: right;
-}
-
-.countryLabel {
-    fill: #333;
-    font-size: 10px;
 }
 
 @media (min-width: 767px) {

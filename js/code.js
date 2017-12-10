@@ -26,58 +26,181 @@ function hxlProxyToJSON(input) {
     return output;
 }
 
+var cf,
+    departementDim,
+    departementGroup,
+    residenceDim,
+    residenceGroup;
 
-//d3.json("data/idp.json", function (idpData) {
+var donnees;
+
+var residenceChart = dc.rowChart('#residenceChart');
+var departementChart = dc.rowChart('#idpDepartement');
+
+var stats;
+
+var statTotIndividus = dc.numberDisplay('#statTotIndividus');
+var statTotMenages = dc.numberDisplay('#statTotMenages');
+var statTotHommes = dc.numberDisplay('#statTotHommes');
+var statTotFemmes = dc.numberDisplay('#statTotFemmes');
+
+var statTotVieux = dc.numberDisplay('#statTotVieux');
+var statTotVieuxH = dc.numberDisplay('#statTotVieuxH');
+var statTotVieuxF = dc.numberDisplay('#statTotVieuxF');
+
+//var statPremierCycle = dc.numberDisplay();
+
+var statTotPrimaire = dc.numberDisplay('#statTotPrimaire');
+var statTotPrimaireH = dc.numberDisplay('#statTotPrimaireH');
+var statTotPrimaireF = dc.numberDisplay('#statTotPrimaireF');
+
+var statTotCollege = dc.numberDisplay('#statTotCollege');
+var statTotCollegeH = dc.numberDisplay('#statTotCollegeH');
+var statTotCollegeF = dc.numberDisplay('#statTotCollegeF');
+
+var statTotLycee = dc.numberDisplay('#statTotLycee');
+var statTotLyceeH = dc.numberDisplay('#statTotLyceeH');
+var statTotLyceeF = dc.numberDisplay('#statTotLyceeF');
+
+var statTotHandicap = dc.numberDisplay('#statTotHandicap');
+var statTotFemmesEnceintes = dc.numberDisplay('#statTotFemmesEnceintes');
+var statTotVeuves = dc.numberDisplay('#statTotVeuves');
+var statTotMalades = dc.numberDisplay('#statTotMalades');
+var statTotEnfantsSeuls = dc.numberDisplay('#statTotEnfantsSeuls');
+var statTotOrphelins = dc.numberDisplay('#statTotOrphelins');
 
 
-function generateCharts(idpData, district) {
+function instanciateData(data) {
 
 
-    var provenanceChart = dc.rowChart('#provenance');
-    var residenceChart = dc.rowChart('#residence');
-    var departementChart = dc.rowChart('#idpDepartement');
+    cf = crossfilter(data);
 
-    var cf = crossfilter(idpData);
-
-    var all = cf.groupAll();
-
-    var Districtdim = cf.dimension(function (d) {
-        return d.district;
+    departementDim = cf.dimension(function (d) {
+        return d['Departement'];
     });
+
+    residenceDim = cf.dimension(function (d) {
+        return d['Site'];
+    });
+
+    departementGroup = departementDim.group().reduceSum(function (d) {
+        return d["Total Individus"];
+    });
+
+
+    residenceGroup = residenceDim.group().reduceSum(function (d) {
+        return d["Total Individus"];
+    });
+
+
+    stats = cf.groupAll().reduce(
+        function (p, v) {
+            p.totIndividus += +parseInt(v["Total Individus"]);
+            p.totMenages += +parseInt(v["Total Menages"]);
+            p.totHommes += +parseInt(v["Total Hommes"]);
+            p.totFemmes += +parseInt(v["Total Femmes"]);
+
+            p.totVieux += +parseInt(v["Total Vieux"]);
+            p.totVieuxH += +parseInt(v["Vieux Hommes"]);
+            p.totVieuxF += +parseInt(v["Vieux Femmes"]);
+
+            p.totPrimaire += +parseInt(v["Total Primaire"]);
+            p.totPrimaireH += +parseInt(v["Primaire Hommes"]);
+            p.totPrimaireF += +parseInt(v["Primaire Femmes"]);
+
+            p.totCollege += +parseInt(v["Total College"]);
+            p.totCollegeH += +parseInt(v["College Hommes"]);
+            p.totCollegeF += +parseInt(v["College Femmes"]);
+
+            p.totLycee += +parseInt(v["Total Lycee"]);
+            p.totLyceeH += +parseInt(v["Lycee Hommes"]);
+            p.totLyceeF += +parseInt(v["Lycee Femmes"]);
+
+            p.handicap += +v["Pers. avec handicape"];
+            p.enceintes += +parseInt(v["Femme Enceinte"]);
+            p.veuves += +parseInt(v["Veuves"]);
+            p.orphelins += +parseInt(v["Orphelins"]);
+            p.malades += +parseInt(v["Pers. Malades"]);
+            p.seuls += +parseInt(v["Enfant non Acc."]);
+
+
+            return p;
+        },
+        function (p, v) {
+            p.totIndividus -= +parseInt(v["Total Individus"]);
+            p.totMenages -= +parseInt(v["Total Menages"]);
+            p.totHommes -= +parseInt(v["Total Hommes"]);
+            p.totFemmes -= +parseInt(v["Total Femmes"]);
+
+            p.totVieux -= +parseInt(v["Total Vieux"]);
+            p.totVieuxH -= +parseInt(v["Vieux Hommes"]);
+            p.totVieuxF -= +parseInt(v["Vieux Femmes"]);
+
+            p.totPrimaire -= +parseInt(v["Total Primaire"]);
+            p.totPrimaireH -= +parseInt(v["Primaire Hommes"]);
+            p.totPrimaireF -= +parseInt(v["Primaire Femmes"]);
+
+            p.totCollege -= +parseInt(v["Total College"]);
+            p.totCollegeH -= +parseInt(v["College Hommes"]);
+            p.totCollegeF -= +parseInt(v["College Femmes"]);
+
+            p.totLycee -= +parseInt(v["Total Lycee"]);
+            p.totLyceeH -= +parseInt(v["Lycee Hommes"]);
+            p.totLyceeF -= +parseInt(v["Lycee Femmes"]);
+
+            p.handicap -= +v["Pers. avec handicape"];
+            p.enceintes -= +parseInt(v["Femme Enceinte"]);
+            p.veuves -= +parseInt(v["Veuves"]);
+            p.orphelins -= +parseInt(v["Orphelins"]);
+            p.malades -= +parseInt(v["Pers. Malades"]);
+            p.seuls -= +parseInt(v["Enfant non Acc."]);
+
+
+            return p;
+        },
+        function () {
+            return {
+                totIndividus: 0,
+                totMenages: 0,
+                totHommes: 0,
+                totFemmes: 0,
+                totVieux: 0,
+                totVieuxH: 0,
+                totVieuxF: 0,
+                totPrimaire: 0,
+                totPrimaireH: 0,
+                totPrimaireF: 0,
+                totCollege: 0,
+                totCollegeH: 0,
+                totCollegeF: 0,
+                totLycee: 0,
+                totLyceeH: 0,
+                totLyceeF: 0,
+                handicap: 0,
+                enceintes: 0,
+                veuves: 0,
+                orphelins: 0,
+                malades: 0,
+                seuls: 0
+            };
+        }
+    );
+
+}
+
+function generateCharts(district) {
+
+    instanciateData(donnees);
+    //departementDim.filterAll();
 
     if (district != '') {
-        Districtdim = Districtdim.filter(district).top(Infinity);
+        departementDim.filter(district);
     }
 
-    var Regiondim = cf.dimension(function (d) {
-        return d.departement;
-    });
-    var Provenancedim = cf.dimension(function (d) {
-        return d.Provenance
-    });
-    var Residencedim = cf.dimension(function (d) {
-        return d.Residence;
-    });
-
-    var RegionGroup = Regiondim.group().reduceSum(function (d) {
-        return d.IDP
-    });
-
-    var DepartementGroup = Regiondim.group().reduceSum(function (d) {
-        return d.IDP
-    });
-    var ProvenanceGroup = Provenancedim.group().reduceSum(function (d) {
-        return d.IDP
-    });
-    var ResidenceGroup = Residencedim.group().reduceSum(function (d) {
-        return d.IDP
-    });
-
-
     departementChart.width(350)
-        .height(400)
-        .dimension(Regiondim)
-        .group(RegionGroup)
+        .height(350)
+        .dimension(departementDim)
+        .group(departementGroup)
         .data(function (group) {
             return group.top(Infinity);
         })
@@ -88,24 +211,10 @@ function generateCharts(idpData, district) {
         .elasticX(true)
         .xAxis().ticks(4);
 
-    provenanceChart.width(350)
-        .height(400)
-        .dimension(Provenancedim)
-        .group(ProvenanceGroup)
-        .data(function (group) {
-            return group.top(15);
-        })
-        .colors(["#3b88c0"])
-        .colorAccessor(function (d) {
-            return 0;
-        })
-        .elasticX(true)
-        .xAxis().ticks(4);
-
     residenceChart.width(350)
-        .height(400)
-        .dimension(Residencedim)
-        .group(ResidenceGroup)
+        .height(650)
+        .dimension(residenceDim)
+        .group(residenceGroup)
         .data(function (group) {
             return group.top(15);
         })
@@ -116,18 +225,194 @@ function generateCharts(idpData, district) {
         .elasticX(true)
         .xAxis().ticks(4);
 
-    //    dc.dataCount('#count-info')
-    //        .dimension(cf)
-    //        .group(all);
+    var totInd = function (d) {
+        return d.totIndividus;
+    };
+
+    var totMen = function (d) {
+        return d.totMenages;
+    };
+
+    var totH = function (d) {
+        return d.totHommes;
+    };
+
+    var totF = function (d) {
+        return d.totFemmes;
+    };
+
+    var totV = function (d) {
+        return d.totVieux;
+    };
+
+    var totVH = function (d) {
+        return d.totVieuxH;
+    };
+
+    var totVF = function (d) {
+        return d.totVieuxF;
+    };
+
+    var totHandi = function (d) {
+        return d.handicap;
+    };
+
+    var biir = function (d) {
+        return d.enceintes;
+    };
+
+    var totP = function (d) {
+        return d.totPrimaire;
+    }
+
+    var totPH = function (d) {
+        return d.totPrimaireH;
+    }
+    var totPF = function (d) {
+        return d.totPrimaireF;
+    }
+
+    var totC = function (d) {
+        return d.totCollege;
+    }
+
+    var totCH = function (d) {
+        return d.totCollegeH;
+    }
+    var totCF = function (d) {
+        return d.totCollegeF;
+    }
+
+    var totL = function (d) {
+        return d.totLycee;
+    }
+
+    var totLH = function (d) {
+        return d.totLyceeH;
+    }
+    var totLF = function (d) {
+        return d.totLyceeF;
+    }
+
+    var totVeuv = function (d) {
+        return d.veuves;
+    }
+
+    var totOrphan = function (d) {
+        return d.orphelins;
+    }
+
+    var totMalad = function (d) {
+        return d.malades;
+    }
+
+    var totS = function (d) {
+        return d.seuls;
+    }
+
+    statTotIndividus.group(stats)
+        .valueAccessor(totInd)
+        .formatNumber(formatDecimalComma);
+
+    statTotMenages.group(stats)
+        .valueAccessor(totMen)
+        .formatNumber(formatDecimalComma);
+
+    statTotHommes.group(stats)
+        .valueAccessor(totH)
+        .formatNumber(formatDecimalComma);
+
+    statTotFemmes.group(stats)
+        .valueAccessor(totF)
+        .formatNumber(formatDecimalComma);
+
+    //Primaire
+    statTotPrimaire.group(stats)
+        .valueAccessor(totP)
+        .formatNumber(formatDecimalComma);
+
+    statTotPrimaireH.group(stats)
+        .valueAccessor(totPH)
+        .formatNumber(formatDecimalComma);
+
+    statTotPrimaireF.group(stats)
+        .valueAccessor(totPF)
+        .formatNumber(formatDecimalComma);
+
+
+
+    //College
+    statTotCollege.group(stats)
+        .valueAccessor(totP)
+        .formatNumber(formatDecimalComma);
+
+    statTotCollegeH.group(stats)
+        .valueAccessor(totCH)
+        .formatNumber(formatDecimalComma);
+
+    statTotCollegeF.group(stats)
+        .valueAccessor(totCF)
+        .formatNumber(formatDecimalComma);
+
+
+    //Lycee
+    statTotLycee.group(stats)
+        .valueAccessor(totL)
+        .formatNumber(formatDecimalComma);
+
+    statTotLyceeH.group(stats)
+        .valueAccessor(totLH)
+        .formatNumber(formatDecimalComma);
+
+    statTotLyceeF.group(stats)
+        .valueAccessor(totLF)
+        .formatNumber(formatDecimalComma);
+
+
+    //Personnes agees
+    statTotVieux.group(stats)
+        .valueAccessor(totV)
+        .formatNumber(formatDecimalComma);
+    statTotVieuxH.group(stats)
+        .valueAccessor(totVH)
+        .formatNumber(formatDecimalComma);
+    statTotVieuxF.group(stats)
+        .valueAccessor(totVF)
+        .formatNumber(formatDecimalComma);
+
+    statTotHandicap.group(stats)
+        .valueAccessor(totHandi)
+        .formatNumber(formatDecimalComma);
+
+    statTotFemmesEnceintes.group(stats)
+        .valueAccessor(biir)
+        .formatNumber(formatDecimalComma);
+
+    statTotVeuves.group(stats)
+        .valueAccessor(totVeuv)
+        .formatNumber(formatDecimalComma);
+
+
+    statTotMalades.group(stats)
+        .valueAccessor(totMalad)
+        .formatNumber(formatDecimalComma);
+
+
+    statTotOrphelins.group(stats)
+        .valueAccessor(totOrphan)
+        .formatNumber(formatDecimalComma);
+
+
+    statTotEnfantsSeuls.group(stats)
+        .valueAccessor(totS)
+        .formatNumber(formatDecimalComma);
 
 
     dc.renderAll();
 
 }
 
-function update(district) {
-
-}
+var formatDecimalComma = d3.format(",.0f");
 
 
 var mapsvg,
@@ -136,7 +421,7 @@ var fillColor = '#dddddd'; //rgba(199,214,235,0.5)';//'#c7d6ee';
 var hoverColor = '#3b88c0'; //'#f47933';
 var inactiveFillColor = '#f2efe9';
 
-function generateMap(adm1, countrieslabel) {
+function generateMap(adm1) {
 
     $('.map-container').fadeIn();
 
@@ -159,14 +444,15 @@ function generateMap(adm1, countrieslabel) {
         .append('path')
         .attr('d', d3.geo.path().projection(mapprojection))
         .attr('id', function (d) {
-            return d.properties.NAME_2;
+            return d.properties.NAME_1;
         })
         .attr('class', function (d) {
-            var classname = (d.properties.NAME_2 != '0') ? 'adm1' : 'inactive';
+            var classname = (d.properties.NAME_1 != '0') ? 'adm1' : 'inactive';
             return classname;
         })
         .attr('fill', function (d) {
-            var clr = (d.properties.NAME_2 != '0') ? fillColor : inactiveFillColor;
+            var clr = (d.properties.NAME_1 != '0') ? fillColor : inactiveFillColor;
+            var clr = (d.properties.NAME_1 != '0') ? fillColor : inactiveFillColor;
             return clr;
         })
         .attr('stroke-width', 1)
@@ -191,19 +477,7 @@ function generateMap(adm1, countrieslabel) {
             maptip.classed('hidden', true);
         })
         .on('click', function (d, i) {
-            selectRegion($(this), d.properties.NAME_2);
-        });
-
-    //create country labels
-    var country = g.selectAll('text')
-        .data(countrieslabel).enter()
-        .append('text')
-        .attr('class', 'countryLabel')
-        .attr("transform", function (d) {
-            return "translate(" + mapprojection([d.coordinates[0], d.coordinates[1]]) + ")";
-        })
-        .text(function (d) {
-            return d.country;
+            selectRegion($(this), d.properties.NAME_1);
         });
 
 
@@ -218,14 +492,13 @@ function selectRegion(region, name) {
     region.attr('fill', hoverColor);
     region.data('selected', true);
     $('.regionLabel > div > strong').html(name);
-    //updateCharts(name);
+    generateCharts(name);
 }
 
 function reset() {
     $('#adm1layer').children('.adm1').attr('fill', fillColor);
     $('.regionLabel > div > strong').html('All Regions');
-    //updateCharts('');
-
+    generateCharts();
     return false;
 }
 
@@ -241,11 +514,7 @@ var adm1Call = $.ajax({
     dataType: 'json',
 });
 
-var countrieslabelCall = $.ajax({
-    type: 'GET',
-    url: 'data/countries.json',
-    dataType: 'json',
-});
+
 
 var idpCall = $.ajax({
     type: 'GET',
@@ -253,14 +522,16 @@ var idpCall = $.ajax({
     dataType: 'json',
 });
 
-$.when(idpCall).then(function (idpArgs) {
-    var idps = idpArgs;
-    generateCharts(idps);
-});
 
-$.when(adm1Call, somCall, countrieslabelCall).then(function (adm1Args, somArgs, countrieslabelArgs) {
+
+
+$.when(idpCall).then(function (idpArgs) {
+    donnees = idpArgs;
+    generateCharts('');
+})
+
+$.when(adm1Call, somCall).then(function (adm1Args, somArgs) {
     //var adm1 = topojson.feature(adm1Args[0],adm1Args[0].objects.som_adm1);
     var som = topojson.feature(somArgs[0], somArgs[0].objects.congo_adm2);
-    var countrieslabel = countrieslabelArgs[0].countries;
-    generateMap(som, countrieslabel);
+    generateMap(som);
 });
