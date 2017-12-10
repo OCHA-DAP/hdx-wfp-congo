@@ -192,7 +192,13 @@ function generateCharts(district) {
 
     instanciateData(donnees);
     //departementDim.filterAll();
+    if (district == 'Pool') {
+        district = '';
+    }
 
+    if (district == 'Niari') {
+        district = '';
+    }
     if (district != '') {
         departementDim.filter(district);
     }
@@ -417,24 +423,24 @@ var formatDecimalComma = d3.format(",.0f");
 
 var mapsvg,
     centered;
-var fillColor = '#dddddd'; //rgba(199,214,235,0.5)';//'#c7d6ee';
+var fillColor = '#F28C8C'; //'#dddddd'; //rgba(199,214,235,0.5)';//'#c7d6ee';
 var hoverColor = '#3b88c0'; //'#f47933';
-var inactiveFillColor = '#f2efe9';
+var inactiveFillColor = '#dddddd';
 
 function generateMap(adm1) {
 
     $('.map-container').fadeIn();
 
     var width = $('#map').width();
-    var height = 400;
+    var height = 550;
 
     mapsvg = d3.select('#map').append('svg')
         .attr('width', width)
         .attr('height', height);
 
-    var mapscale = 9000; //($('body').width()<768) ? width*4.7 : width*2.7;
+    var mapscale = ($('body').width() < 1700) ? width * 4.7 : width * 2.7;
     var mapprojection = d3.geo.mercator()
-        .center([14.7, -3.9])
+        .center([14.3, -0.7]) //7/-0.742/14.326
         .scale(mapscale)
         .translate([width / 2, height / 2]);
 
@@ -444,15 +450,15 @@ function generateMap(adm1) {
         .append('path')
         .attr('d', d3.geo.path().projection(mapprojection))
         .attr('id', function (d) {
-            return d.properties.NAME_1;
+            return d.properties.admin1Name;
         })
         .attr('class', function (d) {
-            var classname = (d.properties.NAME_1 != '0') ? 'adm1' : 'inactive';
+            var classname = (d.properties.admin1Name != '0') ? 'adm1' : 'inactive';
             return classname;
         })
         .attr('fill', function (d) {
-            var clr = (d.properties.NAME_1 != '0') ? fillColor : inactiveFillColor;
-            var clr = (d.properties.NAME_1 != '0') ? fillColor : inactiveFillColor;
+            var clr = (d.properties.admin1Name != '0') ? fillColor : inactiveFillColor;
+            var clr = (d.properties.admin1Name != '0') ? fillColor : inactiveFillColor;
             return clr;
         })
         .attr('stroke-width', 1)
@@ -469,7 +475,7 @@ function generateMap(adm1) {
             maptip
                 .classed('hidden', false)
                 .attr('style', 'left:' + (mouse[0] + 20) + 'px; top:' + (mouse[1] + 20) + 'px')
-                .html(d.properties.NAME_2)
+                .html(d.properties.admin1Name)
         })
         .on('mouseout', function (d, i) {
             if (!$(this).data('selected'))
@@ -477,7 +483,7 @@ function generateMap(adm1) {
             maptip.classed('hidden', true);
         })
         .on('click', function (d, i) {
-            selectRegion($(this), d.properties.NAME_1);
+            selectRegion($(this), d.properties.admin1Name);
         });
 
 
@@ -504,7 +510,7 @@ function reset() {
 
 var somCall = $.ajax({
     type: 'GET',
-    url: 'data/cog-adm2.json',
+    url: 'data/cog_adm2.json',
     dataType: 'json',
 });
 
@@ -532,6 +538,6 @@ $.when(idpCall).then(function (idpArgs) {
 
 $.when(adm1Call, somCall).then(function (adm1Args, somArgs) {
     //var adm1 = topojson.feature(adm1Args[0],adm1Args[0].objects.som_adm1);
-    var som = topojson.feature(somArgs[0], somArgs[0].objects.congo_adm2);
+    var som = topojson.feature(somArgs[0], somArgs[0].objects.cog_adm2);
     generateMap(som);
 });

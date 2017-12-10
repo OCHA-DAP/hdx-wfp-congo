@@ -4,8 +4,9 @@ body {
 }
 */
 
-h3 {
+.col-md-4 h3 {
     font-size: 1.5em;
+    text-decoration: underline;
 }
 
 h4 {
@@ -16,7 +17,8 @@ h4 {
 
 .col-xs-6 h4 {
     font-size: 1.2em;
-    color: #414174;
+    color: #000000;
+    /*    color: #414174;*/
 }
 
 .col-md-6 h4 {
@@ -49,37 +51,37 @@ h4 {
 
 #vulnerabilite p {
     font-size: 1.4em;
-    color: #056CB6;
+    color: #FC4349;
 }
 
 #statTotIndividus {
-    font-size: 1.4em;
-    color: #056CB6;
+    font-size: 1.6em;
+    color: #FC4349;
 }
 
 #statTotMenages {
-    font-size: 1.4em;
-    color: #056CB6;
+    font-size: 1.6em;
+    color: #FC4349;
 }
 
 #statTotVieux {
     font-size: 1.4em;
-    color: #056CB6;
+    color: #FC4349;
 }
 
 #statTotPrimaire {
     font-size: 1.4em;
-    color: #056CB6;
+    color: #FC4349;
 }
 
 #statTotCollege {
     font-size: 1.4em;
-    color: #056CB6;
+    color: #FC4349;
 }
 
 #statTotLycee {
     font-size: 1.4em;
-    color: #056CB6;
+    color: #FC4349;
 }
 
 #residenceChart g.row text {
