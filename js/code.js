@@ -499,7 +499,11 @@ function selectRegion(region, name) {
     region.attr('fill', hoverColor);
     region.data('selected', true);
     $('.regionLabel > div > strong').html(name);
+    departementChart.filterAll();
+
+    departementChart.filter(name);
     generateCharts(name);
+
 }
 
 function reset() {
