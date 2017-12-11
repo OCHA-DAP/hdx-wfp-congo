@@ -438,7 +438,8 @@ function generateMap(adm1) {
         .attr('width', width)
         .attr('height', height);
 
-    var mapscale = ($('body').width() < 1700) ? width * 4.7 : width * 2.7;
+    //var mapscale = ($('body').width() < 1700) ? width * 4.7 : width * 2.7;
+    var mapscale = 3600;
     var mapprojection = d3.geo.mercator()
         .center([14.3, -0.7]) //7/-0.742/14.326
         .scale(mapscale)
