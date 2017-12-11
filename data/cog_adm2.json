@@ -85,7 +85,7 @@
                 "arcs": [[-21, -2, 24, -15, 25]],
                 "properties": {
                     "OBJECTID": 8,
-                    "admin1Name": 0,
+                    "admin1Name": "Niari",
                     "Admin0Pcod": "CG",
                     "Admin0Pc_1": "COG",
                     "Admin1Pcod": "CG08",

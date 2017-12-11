@@ -1,10 +1,4 @@
-            p.totPrimaire -= +parseInt(v["Total Primaire"]);
-            p.totPrimaireH -= +parseInt(v["Primaire Hommes"]);
-            p.totPrimaireF -= +parseInt(v["Primaire Femmes"]);
 
-            p.totCollege -= +parseInt(v["Total College"]);
-            p.totCollegeH -= +parseInt(v["College Hommes"]);
-            p.totCollegeF -= +parseInt(v["College Femmes"]);
 
             function hxlProxyToJSON(input) {
                 var output = [];
