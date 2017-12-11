@@ -505,6 +505,8 @@ function selectRegion(region, name) {
 function reset() {
     $('#adm1layer').children('.adm1').attr('fill', fillColor);
     $('.regionLabel > div > strong').html('All Regions');
+    departementChart.filterAll();
+    residenceChart.filterAll();
     generateCharts();
     return false;
 }
