@@ -130,11 +130,13 @@ h4 {
 .regionLabel {
     position: absolute;
     z-index: 2;
-    bottom: 20px;
+    bottom: 12px;
     right: 35px;
     text-align: right;
 }
 
+
+/*
 @media (min-width: 767px) {
     .container {
         margin: 20px auto;
@@ -147,3 +149,4 @@ h4 {
         bottom: 65px;
     }
 }
+*/
