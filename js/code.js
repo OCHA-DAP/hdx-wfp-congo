@@ -196,9 +196,7 @@ function generateCharts(district) {
         district = '';
     }
 
-    if (district == 'Niari') {
-        district = '';
-    }
+
     if (district != '') {
         departementDim.filter(district);
     }

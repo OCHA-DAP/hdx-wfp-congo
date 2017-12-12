@@ -134,19 +134,3 @@ h4 {
     right: 35px;
     text-align: right;
 }
-
-
-/*
-@media (min-width: 767px) {
-    .container {
-        margin: 20px auto;
-    }
-    .keystat {
-        text-align: right;
-        width: 64%;
-    }
-    .regionLabel {
-        bottom: 65px;
-    }
-}
-*/
