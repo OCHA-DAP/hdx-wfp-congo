@@ -38,6 +38,14 @@ h4 {
     margin-bottom: 5px;
 }
 
+#separateur {
+    border-bottom-color: #dddddd;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
 #provenance {
     width: 100%;
 }
