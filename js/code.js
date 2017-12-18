@@ -191,10 +191,7 @@ function instanciateData(data) {
 function generateCharts(district) {
 
     instanciateData(donnees);
-    //departementDim.filterAll();
-    if (district == 'Pool') {
-        district = '';
-    }
+    departementDim.filterAll();
 
 
     if (district != '') {
@@ -457,7 +454,7 @@ function generateMap(adm1) {
         })
         .attr('fill', function (d) {
             var clr = (d.properties.admin1Name != '0') ? fillColor : inactiveFillColor;
-            var clr = (d.properties.admin1Name != '0') ? fillColor : inactiveFillColor;
+            //var clr = (d.properties.admin1Name != '0') ? fillColor : inactiveFillColor;
             return clr;
         })
         .attr('stroke-width', 1)
@@ -497,10 +494,16 @@ function selectRegion(region, name) {
     region.attr('fill', hoverColor);
     region.data('selected', true);
     $('.regionLabel > div > strong').html(name);
-    departementChart.filterAll();
 
-    departementChart.filter(name);
-    generateCharts(name);
+    if (name == 'Pool') {
+        reset();
+    } else {
+        departementChart.filterAll();
+
+        departementChart.filter(name);
+        generateCharts(name);
+    }
+
 
 }
 

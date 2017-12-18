@@ -107,7 +107,7 @@
                 "arcs": [[29, -6, 30, -4, -20, -28]],
                 "properties": {
                     "OBJECTID": 10,
-                    "admin1Name": 0,
+                    "admin1Name": "Pool",
                     "Admin0Pcod": "CG",
                     "Admin0Pc_1": "COG",
                     "Admin1Pcod": "CG11",
