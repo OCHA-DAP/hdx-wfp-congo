@@ -495,14 +495,11 @@ function selectRegion(region, name) {
     region.data('selected', true);
     $('.regionLabel > div > strong').html(name);
 
-    if (name == 'Pool') {
-        reset();
-    } else {
-        departementChart.filterAll();
+    departementChart.filterAll();
 
-        departementChart.filter(name);
-        generateCharts(name);
-    }
+    departementChart.filter(name);
+    generateCharts(name);
+
 
 
 }
